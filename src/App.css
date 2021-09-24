@@ -1,38 +1,33 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap'); */
+:root{
+  --primary: #212121;
+  --p-light: #484848;
+  --p-dark: #000000;
+  --secondary: #2e7d32;
+  --s-light: #60ad5e;
+  --s-dark: #005005;
+  --t-light: #ffffff;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+*{
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
+  font-family:  'Poppins', sans-serif;
+  /* font-family: 'Paytone One', sans-serif; */
+  /* font-family: 'Noto Sans JP', sans-serif; */
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body::-webkit-scrollbar{
+  width: 7px;
+  background: var(--p-light);
 }
-
-.App-link {
-  color: #61dafb;
+body::-webkit-scrollbar-thumb{
+  border-radius: 10px;
+  background: var(--p-dark); 
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.title{
+  font-family: 'Roboto', sans-serif;
+}
+p{
+  font-family: 'Montserrat', sans-serif;
 }

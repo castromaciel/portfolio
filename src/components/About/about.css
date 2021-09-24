@@ -1,0 +1,17 @@
+/* .bgSkills{
+  background: var(--primary);
+  color: var(--t-light);
+  border-radius: 5px;
+} */
+.photoAbout{
+border-radius: 100%;
+}
+.box{
+  position: relative;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 3;
+}
+.box:hover{
+  box-shadow: 0 4px 8px 0 rgba(156, 156, 156, 0.2), 0 6px 20px 0 rgba(156, 156, 156, 0.19);
+}

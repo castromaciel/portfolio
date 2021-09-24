@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
+
+span{
+  font-family: 'Merriweather Sans', sans-serif;
+}
+.bgHero{
+  position: relative;
+  background-image: url(/src/assets/img/backgroundMe.JPG);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  z-index: 1;
+}
+.textHero{
+  position: absolute;
+  bottom: 50%;
+  transform: translate(0%,70%);
+  color: var(--t-light);
+  z-index: 3;
+}
+.rebound{
+  display: inline-block;
+  cursor: pointer;
+  font-size: 2.5rem;
+  transition: all 300ms ease-out;
+}
+@media (min-width:1024px)
+{
+  .textHero{
+    transform: translate(10%,70%);
+  }
+  .rebound{
+    font-size: 4rem;
+  }
+  .rebound:hover{
+    color: var(--s-light);
+    animation: rubberBand 800ms ease-in-out forwards ;
+  }
+}  
+
+@keyframes rubberBand{
+  0%{
+    transform: scale3d(1,1,1);
+  }
+  35%{
+    transform: scale3d(1.25,.75,1);
+  }
+  45%{
+    transform: scale3d(.75,1,1);
+  }
+  60%{
+    transform: scale3d(1.2,.8,1);
+  }
+  75%{
+    transform: scale3d(1.05,.95,1);
+  }
+  100%{
+    transform: scale3d(1,1,1);
+  }
+}
+

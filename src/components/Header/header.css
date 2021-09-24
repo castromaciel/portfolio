@@ -1,0 +1,23 @@
+
+.bgDark{
+  background: var(--p-dark);
+}
+.navLink{
+  padding-left: .5em;
+  padding-right: .5em;
+  text-decoration: none;
+  color: var(--t-light);
+  transition: 200ms;
+}
+.navLink:hover{
+  color: var(--s-light);
+}
+.navIcon{
+  cursor: pointer;
+  text-decoration: none;
+  transition: 200ms;
+  color: var(--t-light);
+}
+.navIcon:hover{
+  color: var(--s-light);
+}

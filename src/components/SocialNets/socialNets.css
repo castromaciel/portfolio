@@ -1,0 +1,28 @@
+
+.heroNets{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+}
+.socialNet{
+  font-size: 2em;
+  list-style: none;
+}
+.socialNet li{
+  transition: 200ms;
+}
+.socialNet li:hover{
+  transform: scale(1.16);
+}
+.socialNet li a{
+  color: var(--t-light);
+  text-decoration: none;
+}
+ul.socialNet{
+  margin: 0;
+  padding: 0;
+}
+hr{
+  margin: 0;
+}

@@ -1,0 +1,19 @@
+.formContact{
+  width: 100%;
+  display: flex;
+}
+form{
+  /* height: 100vh; */
+  position: relative;
+  z-index: 4;
+}
+.form-group span {
+  font-family: unset;
+  color: #bf1650;
+  padding-top: .25rem;
+  margin: 0;
+}
+.form-group span::before {
+  display: inline;
+  content: "⚠ ";
+}

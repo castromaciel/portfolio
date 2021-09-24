@@ -1,0 +1,49 @@
+.timeline{
+  margin: 2rem 1rem;
+  position: relative;
+}
+.timeline::before{
+  top: 1.25rem; 
+  content: "";
+  position: absolute;
+  width: 0.25em;
+  height: 100%;
+  left: .5rem;
+  background-color: var(--primary);
+}
+.timeline ul li{
+  padding: 1em;
+  border-radius: 0 1em 1em 1em;
+  margin-bottom: 1em;
+  position: relative;
+}
+.timeline ul li::after{
+  content: "";
+  position: absolute;
+  width: 1.25em;
+  height: 1.25em;
+  border-radius: 100%;
+  background: var(--t-light);
+  border: 0.125em solid var(--primary);
+  top: 0;
+  left: 0;
+}
+.timeline ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.timeline-card{
+  padding-left: 1em;
+}
+.timeline-card h1{
+  font-size: 2em;
+  line-height: 1em; 
+}
+.timeline-card h2{
+  font-size: 1.5em;
+  font-weight: 1em; 
+ }
+ .timeline-card p{
+   font-size: 1.25em;
+ }
