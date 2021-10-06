@@ -1,5 +1,6 @@
 import React from 'react'
 import './about.css'
+import curriculum from '../../assets/data/Castromaciel-CV.pdf'
 import btsSkill from '../../assets/img/bootstrap.png'
 import cssSkill from '../../assets/img/css3.png'
 import gitSkill from '../../assets/img/git.png'
@@ -21,6 +22,7 @@ function About() {
           <h2 className="mt-5 pt-4 pt-md-5 mb-3 title">About me</h2>
           <img src={photoMe} alt="Maciel" width="256" className="photoAbout mt-2 "/>
           <p className="fs-4 p-3">My name is Castro Maciel and I'm 21 years old. I'm a student of Biomedical Engineering at Universidad Nacional de Tucumán and Fullstack Student at Rolling Code School.</p>
+          <a href={curriculum} className="align-self-end m-3 fs-4 btn bi bi-file-earmark-pdf" download="Castromaciel-CV" title="Castromaciel-CV.pdf">Download Cv</a>
         </div>
         {/* Skills */}
         <div className="d-flex flex-column align-items-center col-12 col-lg-6">

@@ -1,8 +1,7 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import './fallingLeaves.css'
 import './header.css'
-
 import leave1 from '../../assets/imgLeaves/leaves1.png'
 import leave2 from '../../assets/imgLeaves/leaves2.png'
 import leave3 from '../../assets/imgLeaves/leaves3.png'
@@ -10,10 +9,9 @@ import leave4 from '../../assets/imgLeaves/leaves4.png'
 
 function Header() {
 
-  let leave = document.getAnimations();
-  let setLeaves = document.getElementsByClassName('set');
-  let bgLeaves = document.getElementsByClassName('bgFallingLeaves')
-  // console.log(bgLeaves[0])
+  const leave = document.getAnimations();
+  const setLeaves = document.getElementsByClassName('set');
+  const bgLeaves = document.getElementsByClassName('bgFallingLeaves')
   function startLeaves(){
     bgLeaves[0].classList.add('bgSize')
     for(let i = 0; i<setLeaves.length; i++){
@@ -28,7 +26,8 @@ function Header() {
       bgLeaves[0].classList.remove('bgSize')
 
     }
-  }
+  }  
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bgDark justify-content-between fixed-top">
@@ -39,22 +38,22 @@ function Header() {
           <div className="collapse navbar-collapse " id="navbarNavAltMarkup">
             <ul className="navbar-nav fs-3">
               <li className="nav-item py-3 py-lg-0 py-xl-0">
-                <Link to="/" className="navLink">Home</Link>
+                <NavLink exact to="/" className="navLink" activeClassName="navLinkActive">Home</NavLink>
               </li>
               <li className="nav-item py-3 py-lg-0 py-xl-0">
-                <Link to='/about' className="navLink">About </Link>
+                <NavLink exact to='/about' className="navLink" activeClassName="navLinkActive">About </NavLink>
               </li>
               <li className="nav-item py-3 py-lg-0 py-xl-0">
-                <Link to='/portfolio' className="navLink">Portfolio </Link>
+                <NavLink exact to='/portfolio' className="navLink" activeClassName="navLinkActive">Portfolio </NavLink>
               </li>
               <li className="nav-item py-3 py-lg-0 py-xl-0">
-                <Link to='/contact' className="navLink">Contact Me</Link>
+                <NavLink exact to='/contact' className="navLink" activeClassName="navLinkActive">Contact Me</NavLink>
               </li>
             </ul>
           </div>
         </div>
         <div className="me-4 align-self-start">
-          <i className="navIcon fs-1 bi bi-dice-3" onClick={startLeaves}></i>
+          <i className="navIcon fs-1 bi bi-dice-3" onClick={startLeaves} title="Show Effect"></i>
         </div>
       </nav>
       <div className="bgFallingLeaves">

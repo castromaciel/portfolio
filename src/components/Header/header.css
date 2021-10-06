@@ -9,7 +9,7 @@
   color: var(--t-light);
   transition: 200ms;
 }
-.navLink:hover{
+.navLinkActive, .navLink:hover{
   color: var(--s-light);
 }
 .navIcon{

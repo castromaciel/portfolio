@@ -1,51 +1,48 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { useForm } from "react-hook-form";
-// import emailjs from 'emailjs-com';
+import emailjs from 'emailjs-com';
 import './contactForm.css'
 
 function ContactForm() {
 
   const {register,handleSubmit, formState: { errors }} = useForm()
 
+  const form = useRef();
   
   const onSubmit = (data) => {
-    data.preventDefault()
     console.log(data)
-
+    if(data){
+      console.log(form.current)
+      emailjs.sendForm("service_r13vctf","portfolio_template", form.current, 'user_JxofNhNDKfx8Q6mKl2CRl')
+      .then((result) => {
+        console.log(result.text)
+        alert("Your message has been received.")
+        window.location.reload()
+      },
+      (error) => {
+        console.log(error.text)
+      });
+      // data.target.reset() 
+    }
   };
-   // your form submit function which will invoke after successful validation
-  // ------------------------------- //
-  // const sendEmail = (data) => {
-  //   data.preventDefault()
-  //   console.log(data.target)
-    // emailjs.sendForm("service_r13vctf","portfolio_template", data, 'user_JxofNhNDKfx8Q6mKl2CRl')
-    //   .then((result) => {
-    //     console.log(result.text)
-    //   },
-    //   (error) => {
-    //     console.log(error.text)
-    //   });
-    // data.target.reset()
-  // }
-  // ------------------------------------ //
 
   return (
     <div className="container d-flex flex-column justify-content-center boxForm">
-      <h1 className="mt-5 pt-4 pt-md-5 mb-3 title mx-auto title">Contact</h1>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <h2 className="mt-5 pt-4 pt-md-5 mb-3 title mx-auto title">Contact</h2>
+      <form ref={form} onSubmit={handleSubmit(onSubmit)}>
         <div className="row pt-2 mx-auto ">
           <div className="col-8 form-group mx-auto">
             <h5 className="ps-2">Name</h5>
             <input {...register("name",{
               required: true,
-              maxLength: 20,
+              maxLength: 30,
               minLength: 5,
               pattern: /^[A-Za-z ]+$/i
             })} 
             className="form-control" placeholder=" Name" name="name"/>
             {errors?.name?.type === "required" && <span className="requiredData">This field is required</span>}
             {errors?.name?.type === "minLength" && <span className="requiredData">First name must be 5 characters or more</span>}
-            {errors?.name?.type === "maxLength" && <span className="requiredData">First name cannot exceed 20 characters</span>}
+            {errors?.name?.type === "maxLength" && <span className="requiredData">First name cannot exceed 30 characters</span>}
             {errors?.name?.type === "pattern" && <span className="requiredData">Alphabetical characters only</span>}
           </div>
           <div className="col-8 form-group mx-auto pt-2">
