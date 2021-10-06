@@ -27,4 +27,4 @@ You will also see any lint errors in the console.
 ### Deployment
 
 The Project is actually deployed at netlify.
-Open [http://localhost:3000](http://localhost:3000)
+Open [https://castromaciellr.netlify.app/](https://castromaciellr.netlify.app/)
