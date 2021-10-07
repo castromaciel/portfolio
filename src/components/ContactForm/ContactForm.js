@@ -27,7 +27,7 @@ function ContactForm() {
   };
 
   return (
-    <div className="container d-flex flex-column justify-content-center boxForm">
+    <div className="container d-flex flex-column justify-content-center">
       <h2 className="mt-5 pt-4 pt-md-5 mb-3 title mx-auto title">Contact</h2>
       <form ref={form} onSubmit={handleSubmit(onSubmit)}>
         <div className="row pt-2 mx-auto ">
