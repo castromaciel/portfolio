@@ -2,27 +2,32 @@ import React, { useRef } from 'react'
 import { useForm } from "react-hook-form";
 import emailjs from 'emailjs-com';
 import './contactForm.css'
+import swal from 'sweetalert';
 
 function ContactForm() {
 
-  const {register,handleSubmit, formState: { errors }} = useForm()
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors }
+  } = useForm({ defaultValues: { name: "", email: "", subject:"", message:"" } })
 
   const form = useRef();
   
   const onSubmit = (data) => {
     console.log(data)
     if(data){
-      console.log(form.current)
+      // console.log(form.current)
       emailjs.sendForm("service_r13vctf","portfolio_template", form.current, 'user_JxofNhNDKfx8Q6mKl2CRl')
       .then((result) => {
-        console.log(result.text)
-        alert("Your message has been received.")
-        window.location.reload()
+        // console.log(result.text)
+        swal("Good job!", "You clicked the button!", "success");
+        reset();
       },
       (error) => {
         console.log(error.text)
       });
-      // data.target.reset() 
     }
   };
 
@@ -30,7 +35,7 @@ function ContactForm() {
     <div className="container d-flex flex-column justify-content-center">
       <h2 className="mt-5 pt-4 pt-md-5 mb-3 title mx-auto title">Contact</h2>
       <form ref={form} onSubmit={handleSubmit(onSubmit)}>
-        <div className="row pt-2 mx-auto ">
+        <div className="row pt-2 mx-auto mb-3">
           <div className="col-8 form-group mx-auto">
             <h5 className="ps-2">Name</h5>
             <input {...register("name",{

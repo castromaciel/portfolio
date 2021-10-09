@@ -1,6 +1,6 @@
 import React from 'react'
 import './about.css'
-import curriculum from '../../assets/data/Castromaciel-CV.pdf'
+import curriculum from '../../assets/static/Castromaciel-CV.pdf'
 import btsSkill from '../../assets/img/bootstrap.png'
 import cssSkill from '../../assets/img/css3.png'
 import gitSkill from '../../assets/img/git.png'
