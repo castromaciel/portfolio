@@ -18,11 +18,9 @@ function ContactForm() {
   const onSubmit = (data) => {
     console.log(data)
     if(data){
-      // console.log(form.current)
       emailjs.sendForm("service_r13vctf","portfolio_template", form.current, 'user_JxofNhNDKfx8Q6mKl2CRl')
       .then((result) => {
-        // console.log(result.text)
-        swal("Good job!", "You clicked the button!", "success");
+        swal("Good job!", "Your message was sent successfully", "success");
         reset();
       },
       (error) => {
@@ -42,7 +40,7 @@ function ContactForm() {
               required: true,
               maxLength: 30,
               minLength: 5,
-              pattern: /^[A-Za-z ]+$/i
+              pattern:  /^[a-zA-ZÀ-ÿ\s]{1,40}$/
             })} 
             className="form-control" placeholder=" Name" name="name"/>
             {errors?.name?.type === "required" && <span className="requiredData">This field is required</span>}

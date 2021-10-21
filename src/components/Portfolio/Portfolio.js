@@ -11,7 +11,7 @@ import javascript from '../../assets/img/js2.png'
 import reactjs from '../../assets/img/react.png'
 import pokeapi from '../../assets/img/poke-api.png'
 import emailjs from '../../assets/img/emailjs.png'
-import rhf from '../../assets/img/react-hook-form.png'
+import rhf from '../../assets/img/react-hook-form.jpg'
 
 function Portfolio() {
   return (
@@ -148,7 +148,7 @@ function Portfolio() {
                 <div className="row justify-content-center mt-3">
                   <img src={reactjs} className="col-2" alt="React"/>
                   <img src={bootstrap} className="col-2" alt="Bootstrap"/>
-                  <img src={rhf} className="col-3" alt="React-Hook-Form"/>
+                  <img src={rhf} className="col-2" alt="React-Hook-Form"/>
                   <img src={emailjs} className="col-2" alt="EmailJS"/>
                 </div>
               </div>
