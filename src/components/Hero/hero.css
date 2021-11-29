@@ -5,7 +5,7 @@ span{
 }
 .bgHero{
   position: relative;
-  background-image: url(/src/assets/img/backgroundMe.JPG);
+  background-image: url(/src/assets/images/backgroundMe.JPG);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
