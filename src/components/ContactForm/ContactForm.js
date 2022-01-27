@@ -31,7 +31,7 @@ function ContactForm() {
 
   return (
     <div className="container d-flex flex-column justify-content-center">
-      <h2 className="mt-5 pt-4 pt-md-5 mb-3 title mx-auto title">Contact</h2>
+      <h2 className="mt-5 pt-4 pt-md-5 mb-3 title mx-auto title">Contact With Me</h2>
       <form ref={form} onSubmit={handleSubmit(onSubmit)}>
         <div className="row pt-2 mx-auto mb-3">
           <div className="col-8 form-group mx-auto">
@@ -84,6 +84,6 @@ function ContactForm() {
       </form>
     </div>
   )
-  }
+}
 
 export default ContactForm

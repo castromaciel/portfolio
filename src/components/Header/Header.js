@@ -2,10 +2,10 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import './fallingLeaves.css'
 import './header.css'
-import leave1 from '../../assets/imgLeaves/leaves1.png'
-import leave2 from '../../assets/imgLeaves/leaves2.png'
-import leave3 from '../../assets/imgLeaves/leaves3.png'
-import leave4 from '../../assets/imgLeaves/leaves4.png'
+import leave1 from '../../assets/images/leaves1.png'
+import leave2 from '../../assets/images/leaves2.png'
+import leave3 from '../../assets/images/leaves3.png'
+import leave4 from '../../assets/images/leaves4.png'
 
 function Header() {
 

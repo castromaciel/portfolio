@@ -4,11 +4,14 @@ import p1hlc from '../../assets/images/p1hlc.jpeg'
 import p3pa from '../../assets/images/p3pa.jpeg'
 import p2ug from '../../assets/images/p2ug.jpeg'
 import p4pcm from '../../assets/images/p4pcm.jpeg'
+import p5ods from '../../assets/images/p5ods.jpg'
 import html from '../../assets/images/html5.png'
 import css from '../../assets/images/css3.png'
 import bootstrap from '../../assets/images/bootstrap.png'
 import javascript from '../../assets/images/js2.png'
 import reactjs from '../../assets/images/react.png'
+import nodejs from '../../assets/images/nodejs2.png'
+import mongo from '../../assets/images/mongodb.png'
 import pokeapi from '../../assets/images/poke-api.png'
 import emailjs from '../../assets/images/emailjs.png'
 import rhf from '../../assets/images/react-hook-form.jpg'
@@ -102,13 +105,13 @@ function Portfolio() {
                   <i className="me-1 bi bi-eye-fill"></i>View Page</a>
               </li>
               <li className="accordion" id="accordionExample">
-                <h2 class="accordion-header" id="headFour">
-                  <button className="btn-portfolio-more accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                <h2 class="accordion-header" id="headThree">
+                  <button className="btn-portfolio-more accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
                   </button>
                 </h2>
               </li>
             </ul>
-            <div id="flush-collapseFour" className="accordion-collapse collapse" aria-labelledby="flush-headFour" data-bs-parent="#accordionFlushExample">
+            <div id="flush-collapseThree" className="accordion-collapse collapse" aria-labelledby="flush-headThree" data-bs-parent="#accordionFlushExample">
               <div className="accordion-body ">
                 <p className="m-0 p-0">Web page that shows the pokemons from the api 'pokeapi.co'. This page was designed to practice Fetch and API consumption.</p>
                 <div className="row justify-content-center mt-3">
@@ -136,13 +139,13 @@ function Portfolio() {
                   <i className="me-1 bi bi-eye-fill"></i>View Page</a>
               </li>
               <li className="accordion" id="accordionExample">
-                <h2 class="accordion-header" id="headThree">
-                  <button className="btn-portfolio-more accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                <h2 class="accordion-header" id="headFour">
+                  <button className="btn-portfolio-more accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
                   </button>
                 </h2>
               </li>
             </ul>
-            <div id="flush-collapseThree" className="accordion-collapse collapse" aria-labelledby="flush-headThree" data-bs-parent="#accordionFlushExample">
+            <div id="flush-collapseFour" className="accordion-collapse collapse" aria-labelledby="flush-headFour" data-bs-parent="#accordionFlushExample">
               <div className="accordion-body ">
                 <p className="m-0 p-0">My current portfolio made with ReactJs and Bootstrap. Also I used react-hook-form and emailjs for 'Contact me' section.</p>
                 <div className="row justify-content-center mt-3">
@@ -150,6 +153,41 @@ function Portfolio() {
                   <img src={bootstrap} className="col-2" alt="Bootstrap"/>
                   <img src={rhf} className="col-2" alt="React-Hook-Form"/>
                   <img src={emailjs} className="col-2" alt="EmailJS"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* p5ods */}
+        <div className="col-12 col-md-12 col-lg-6 col-xl-6 px-3 mt-3">
+          <div className="card pb-3">
+            <img src={p5ods} className="card-img-top" width="100" alt='Portfolio' />
+            <div className="card-body">
+              <h4 className="card-title">Oasis Drugstore</h4>
+            </div>
+            <ul className="d-flex justify-content-evenly align-items-center list-unstyled my-0">
+              <li>
+                <a href="https://github.com/castromaciel/Drugstore-Front" target="_blank" rel="noreferrer" className="btn-portfolio text-uppercase text-decoration-none text-dark"><i className="me-1 bi bi-github"></i>Github</a>
+              </li>
+              <li>
+                <a href="https://drogueriaoasis.netlify.app/" target="_blank" rel="noreferrer" className="btn-portfolio text-uppercase text-decoration-none text-dark">
+                  <i className="me-1 bi bi-eye-fill"></i>View Page</a>
+              </li>
+              <li className="accordion" id="accordionExample">
+                <h2 class="accordion-header" id="headFive">
+                  <button className="btn-portfolio-more accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                  </button>
+                </h2>
+              </li>
+            </ul>
+            <div id="flush-collapseFive" className="accordion-collapse collapse" aria-labelledby="flush-headFive" data-bs-parent="#accordionFlushExample">
+              <div className="accordion-body ">
+                <p className="m-0 p-0">Website of the 'Droguería Oasis'. It was designed and developed by me and a group of students from 'Rolling Code School'. We used Bootstrap, ReactJs, NodeJs and MongoDB.</p>
+                <div className="row justify-content-center mt-3">
+                  <img src={reactjs} className="col-2" alt="React"/>
+                  <img src={bootstrap} className="col-2" alt="Bootstrap"/>
+                  <img src={nodejs} className="col-2" alt="React-Hook-Form"/>
+                  <img src={mongo} className="col-2" alt="EmailJS"/>
                 </div>
               </div>
             </div>
